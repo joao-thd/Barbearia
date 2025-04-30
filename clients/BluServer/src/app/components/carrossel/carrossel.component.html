@@ -1,0 +1,17 @@
+<div class="carrossel-container">
+    <div class="carrossel-slide" *ngFor="let imagem of imagens; let i = index" [class.ativo]="i === indiceAtual">
+      <img [src]="imagem.src" alt="Slide" class="carrossel-img" />
+      <div class="carrossel-texto">
+        <h1>{{ imagem.titulo }}</h1>
+        <p>{{ imagem.descricao }}</p>
+        <button class="botao-vermelho">BAIXAR APP</button>
+      </div>
+    </div>
+  
+    <div class="carrossel-controles">
+        <button (click)="anterior()">‹</button>
+        <button (click)="proximo()">›</button>
+      </div>
+      
+  </div>
+  

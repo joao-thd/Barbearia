@@ -1,0 +1,121 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+  background: rgba(0, 0, 0, 0.7); /* Preto semi-transparente */
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2); /* Linha dourada suave */
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15); /* Sombra dourada */
+}
+ 
+/* Logo */
+.logo-fixada {
+  width: 110px;
+  height: 110px;
+  transition: transform 0.4s ease;
+  margin-bottom: 11px;
+}
+
+.logo-fixada:hover {
+  transform: scale(1.1);
+}
+
+/* Container Navbar */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #FFD700, #ffcc00);
+  bottom: -5px;
+  left: -100%;
+  transition: left 0.4s ease;
+}
+
+.nav-links a:hover::before {
+  left: 0;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+/* Botão de Login */
+.login-component a {
+  padding: 8px 20px;
+  border: 2px solid #FFD700;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #FFD700;
+  background: transparent;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.4s ease;
+}
+
+.login-component a:hover {
+  background: linear-gradient(90deg, #FFD700, #ffcc00);
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .login-component a {
+    width: 100%;
+    text-align: center;
+  }
+}

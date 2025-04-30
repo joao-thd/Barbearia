@@ -1,0 +1,97 @@
+.carrossel-container {
+    width: 100%;
+    height: 500px; /* altura que você quiser */
+    background-color: black; /* só pra evitar espaços brancos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    
+  }
+  
+  .carrossel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .carrossel-slide.ativo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fade 0.5s ease-in-out;
+  }
+  
+  .carrossel-img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+    margin: 20px 20px 20px 20px;
+  }
+  
+  
+  .carrossel-texto {
+    width: 50%;
+    padding: 40px;
+    color: white;
+    background: black;
+  }
+  
+  .carrossel-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .carrossel-texto p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .botao-vermelho {
+    background: #e1c002;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .carrossel-controles {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none; /* impede que interfira com cliques se não tiver nada */
+    background: none;
+  }
+  
+  .carrossel-controles button {
+    all: unset; /* remove estilos padrão que possam causar bugs */
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 99;
+    pointer-events: all; /* garante que os botões ainda possam ser clicados */
+  }
+  
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

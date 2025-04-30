@@ -1,0 +1,6 @@
+@BluServs_HostAddress = http://localhost:5129
+
+GET {{BluServs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

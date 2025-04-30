@@ -1,0 +1,98 @@
+<section id="Servico">
+  <h1></h1>
+</section>
+
+
+<nav>
+  <app-nav-bar *ngIf="showNavbar"></app-nav-bar>
+</nav>
+
+<app-carrossel *ngIf="showCarrossel"></app-carrossel>
+
+
+<!--Section Sobre com estrutura feita-->
+<section id="Sobre" class="sobre-section">
+
+  <div class="sobre-header-principal">
+    <h2>💈 Muito mais do que um corte de cabelo</h2><!--Titulo principal-->
+  </div>
+
+  <div class="sobre-cards"> <!--Cards informativos médios de apresentação-->
+
+    <app-card title="Tradição e Estilo"
+      content="Levamos a barbearia clássica a um novo nível, com cortes modernos e atendimento personalizado."></app-card>
+
+
+    <app-card title="Ambiente Único"
+      content="Um espaço confortável, com música boa, conversa de verdade e aquele cafezinho que não pode faltar."></app-card>
+
+    <app-card title="Profissionais de Respeito"
+      content="Nossa equipe é formada por barbeiros experientes e apaixonados pelo que fazem."></app-card>
+
+  </div>
+
+  <div class="sobre-header-secundario"><!--Titulo segunda parte-->
+    <h2>Nossa Essência</h2>
+  </div>
+
+  <div class="sobre-cards-grandes">
+
+    <app-card-grande title="Experiência Completa"
+      content="Não é só cortar o cabelo. É um momento seu. Aqui, você relaxa, troca ideia e sai renovado. Seja um corte na régua ou uma barba alinhada, cuidamos de cada detalhe com precisão."></app-card-grande>
+
+    <app-card-grande title="Produtos de Qualidade"
+      content="Usamos apenas os melhores produtos do mercado para garantir um resultado duradouro, perfumado e saudável — tanto pra sua pele quanto pro seu cabelo."></app-card-grande>
+
+    <app-card-grande title="Nosso Compromisso com Você"
+      content="Valorizamos o seu tempo e sua confiança. Trabalhamos com agendamento e pontualidade, porque sabemos que estilo e respeito andam juntos."></app-card-grande>
+  </div><!--Cards Grandes estilo panfleto-->
+</section>
+
+<section id="Servicos" class="servicos-section">
+  <div class="sobre-header-principal">
+    <h2>O que oferecemos</h2>
+  </div>
+
+  <div class="c-cards-servicos">
+    <app-card-servicos
+      *ngFor="let card of cards"
+      [title]="card.title"
+      [content]="card.content"
+      [imageUrl]="card.imageUrl"
+    ></app-card-servicos>
+  </div>
+</section>
+
+<section id="Contatos" class="contato">
+  <div class="container">
+    <h2>Entre em contato</h2>
+    <p>Tire suas dúvidas</p>
+
+    <div class="contato-conteudo">
+      <form action="enviar.php" method="post" class="formulario-contato">
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      <input type="tel" name="telefone" placeholder="Digite seu Telefone" required>
+      <input type="text" name="email" placeholder="Digite seu email" required>
+      <textarea name="mensage" placeholder="Digite sua mensage" required></textarea>
+      <button >Enviar Mensagem</button>
+    </form>
+
+      <div class="info-contato">
+        <h3>Informações</h3>
+        <p><strong>Endereço:</strong> Rua teste, 123 - Bairo Itoupava Central</p>
+        <p><strong>Telefone:</strong> (47) 98765-4321</p>
+        <p><strong>Email:</strong>contatotesteexemplo.com</p>
+
+        <div class="redes-sociais">
+          <a href="#" target="_blank">WhatsApp</a>
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?..."></iframe>
+      </div>
+  </div>
+</section>

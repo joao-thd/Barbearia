@@ -1,0 +1,233 @@
+/* RESET GERAL */
+* {
+  
+  box-sizing: border-box;
+  background-color:  black;
+}
+
+/* SEÇÃO SOBRE */
+.sobre-section {
+  padding: 60px 20px;
+  color: #fff;
+}
+
+#Sobre {
+
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2); /* Linha dourada suave */
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15); /* Sombra dourada */
+  
+  border-top: 2px solid #ffd700;
+  padding-top: 100px;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2); /* Linha dourada suave */
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15);
+
+}
+
+
+
+
+
+
+/* TÍTULOS */
+.sobre-header-principal h2,
+.sobre-header-secundario h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  background: none;
+}
+
+/* CARDS PEQUENOS */
+.sobre-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+app-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+/* CARDS GRANDES - PANFLETO VERTICAL COLADOS */
+.sobre-cards-grandes {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+app-card-grande {
+  flex: 0 0 240px;
+  height: 600px;
+  padding: 30px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+
+
+#Servicos {
+  gap: 5px;
+  padding: 5px;
+}
+
+app-card-servicos {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+
+
+.c-cards-servicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+  justify-items: center;
+}
+.contato {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+
+.contato .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título com efeito de luz */
+.contato h2 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.contato p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* Layout do conteúdo */
+.contato-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Formulário */
+.formulario-contato {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  font-size: 16px;
+}
+
+.formulario-contato input::placeholder,
+.formulario-contato textarea::placeholder {
+  color: #bbb;
+}
+
+.formulario-contato textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.formulario-contato button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.formulario-contato button:hover {
+  background-color: #e6c200;
+  transform: scale(1.05);
+}
+
+/* Informações de contato */
+.info-contato {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.info-contato h3 {
+  font-size: 28px;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.info-contato p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #eee;
+}
+
+/* Links das redes sociais */
+.redes-sociais a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #FFD700;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+  color: #fff;
+}
+
+/* Mapa */
+.mapa {
+  margin-top: 50px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 12px;
+}
+
+#Contatos{
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2); /* Linha dourada suave */
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15); /* Sombra dourada */
+}
+

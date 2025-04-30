@@ -1,0 +1,49 @@
+
+    <!-- Modal de Agendamento -->
+    <div class="modal-overlay" *ngIf="modalAberto" (click)="fecharModal()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+          <h2>Agendar Serviço</h2>
+      
+          <form (ngSubmit)="enviarFormulario()">
+            
+            <!-- Seção: Serviços -->
+            <div class="form-section">
+              <h3>Serviço</h3>
+              <div class="checkbox-grid">
+                <label *ngFor="let servico of servicos">
+                  <input type="checkbox" [(ngModel)]="servico.selecionado" name="servico-{{servico.nome}}">
+                  {{ servico.nome }}
+                </label>
+              </div>
+            </div>
+      
+            <!-- Seção: Data -->
+            <div class="form-section">
+              <h3>Data</h3>
+              <input type="date" [(ngModel)]="dataSelecionada" name="data" required />
+            </div>
+      
+            <!-- Seção: Horário -->
+            <div class="form-section">
+              <h3>Horário</h3>
+              <div class="horarios-grid">
+                <button type="button"
+                        *ngFor="let horario of horariosDisponiveis"
+                        [class.selected]="horarioSelecionado === horario"
+                        (click)="selecionarHorario(horario)">
+                  {{ horario }}
+                </button>
+              </div>
+            </div>
+      
+            <button type="submit" class="submit-btn">Confirmar Agendamento</button>
+            <button type="button" (click)="fecharModal()" class="cancel-btn">Cancelar</button>
+      
+          </form>
+      
+        </div>
+<<<<<<< HEAD
+      </div>
+=======
+      </div>
+>>>>>>> 4f88f4de4e3572fd0645fa671708a86f96ea40f1
